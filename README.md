@@ -5,7 +5,7 @@ OMNeT++/INET network simulation for evaluating ID-based on/offline signcryption 
 
 ## Overview
 
-This project provides a network-level performance evaluation of three ID-based on/offline signcryption schemes using the OMNeT++ discrete event simulator. The simulation demonstrates the practical advantage of O(1) token retrieval (AOOSE/COOSE) over O(n) retrieval (Baseline) as the number of pre-loaded OffSigncrypt output increases.
+This project provides a network-level performance evaluation of three ID-based on/offline signcryption schemes using the OMNeT++ discrete event simulator. The simulation demonstrates the practical advantage of O(1) token(OffSigncrypt output) retrieval (AOOSE/COOSE) over O(n) retrieval (Baseline) as the number of pre-loaded OffSigncrypt outputs increases.
 
 
 ## Schemes Compared
@@ -21,7 +21,7 @@ This project provides a network-level performance evaluation of three ID-based o
 
 
 ## Project Structure
-
+```
 OOSEDrone/
 ├── src/                              # OMNeT++ simulation source
 │   ├── SigncryptApp.ned              # Module parameter definitions (NED)
@@ -57,7 +57,7 @@ OOSEDrone/
 │
 ├── .gitignore
 └── README.md
-
+```
 
 ## Requirements
 
@@ -68,6 +68,7 @@ OOSEDrone/
 
 
 ## Network Topology
+```
 Ground Station (GCS)         Receiver Drones [0..9]
 |                            /  |     |
 | OffSigncrypt              /   |     |
@@ -76,8 +77,9 @@ v                         v     v     v
 Sender Drone  ──────────>  receiver[i]
 (TurtleMobility)          (MassMobility)
 OnSigncrypt + send         UnSigncrypt
+```
 
-- **Ground Station**: Pre-flight OffSigncrypt, loads token DB onto sender drone
+- **Ground Station**: Pre-flight OffSigncrypt, loads token(OffSigncrypt output) DB onto sender drone
 - **Sender Drone**: Flies waypoint mission, performs OnSigncrypt per message, dynamically selects receiver
 - **Receiver Drones**: Fixed positions, receive and UnSigncrypt ciphertext
 - **Wireless**: IEEE 802.11 Ad-hoc mode with GlobalArp
