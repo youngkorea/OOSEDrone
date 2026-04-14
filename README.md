@@ -152,7 +152,7 @@ python3 plot_results.py
 | Metric | Description |
 |--------|-------------|
 | OffSigncrypt delay | Total pre-flight token generation time (dbSize × per-token time) |
-| Token retrieval time | Wall-clock measured: O(1) stack pop vs O(n) linear scan |
+| Token retrieval time | CPU Time measured: O(1) stack pop vs O(n) linear scan |
 | Online phase latency | Token retrieval + OnSigncrypt computation time |
 | Sender throughput | Packets successfully sent per second |
 | Packet delivery ratio | Packets received by receivers/packets sent by sender |
