@@ -5,7 +5,7 @@ OMNeT++/INET network simulation for evaluating ID-based on/offline signcryption 
 
 ## Overview
 
-This project provides a network-level performance evaluation of three ID-based on/offline signcryption schemes using the OMNeT++ discrete event simulator. The simulation demonstrates the practical advantage of O(1) token(OffSigncrypt output) retrieval (AOOSE/COOSE) over O(n) retrieval (Baseline) as the number of pre-loaded OffSigncrypt outputs increases.
+This project provides a network-level performance evaluation of three ID-based on/offline signcryption schemes using the OMNeT++ discrete event simulator. The simulation demonstrates the practical advantage of O(1) token (OffSigncrypt output) retrieval (AOOSE/COOSE) over O(n) retrieval (Baseline) as the number of pre-loaded OffSigncrypt outputs increases.
 
 
 ## Schemes Compared
