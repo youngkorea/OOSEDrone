@@ -1,0 +1,29 @@
+<movement>
+    <!-- Initial speed 30m/s, starting at Ground Station position (850,900) -->
+    <set speed="30" x="850" y="900"/>
+    <repeat>
+        <!-- WP1: Near receiver[0], sensor data collection -->
+        <moveto x="300" y="200"/>
+        <wait t="5"/> <!-- 5s burst: OnSigncrypt with token from DB -->
+
+        <!-- WP2: Near receiver[4], center area -->
+        <moveto x="900" y="500"/>
+        <wait t="5"/>
+
+        <!-- WP3: Near receiver[1] -->
+        <moveto x="1500" y="200"/>
+        <wait t="5"/>
+
+        <!-- WP4: Near receiver[3] -->
+        <moveto x="1500" y="800"/>
+        <wait t="5"/>
+
+        <!-- WP5: Near receiver[2] -->
+        <moveto x="300" y="800"/>
+        <wait t="5"/>
+
+        <!-- Return to Ground Station for token reload -->
+        <moveto x="900" y="920"/>
+        <wait t="10"/> <!-- 10s: recharge and reload offline tokens -->
+    </repeat>
+</movement>

@@ -1,0 +1,28 @@
+# Build outputs
+src/out/
+src/Makefile
+simulations/Makefile
+
+# Object files
+*.o
+*.d
+*.exe
+*.so
+*.a
+
+# Simulation raw data (large files)
+simulations/results/*.vec
+simulations/results/*.vci
+simulations/results/*.sca
+
+# OMNeT++ IDE/environment
+.cmdenv-log
+.qtenvrc
+.project
+.cproject
+.oppbuildspec
+.settings/
+
+# Compiled binaries
+src/src
+benchmark/*/main

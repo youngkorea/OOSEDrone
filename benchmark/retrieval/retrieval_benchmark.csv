@@ -1,0 +1,17 @@
+--- Time Complexity (us) ---
+Algorithm,Retrieval_Time_us
+AOOSE O(1) Stack Pop,0.000695
+COOSE O(1) Stack Pop,0.000709
+Baseline O(n) Linear Scan (1-element),0.000694
+Baseline O(log n) Binary Search (1-step),0.001613
+Baseline O(1) Hash Map (Compute+Lookup),0.055190
+
+--- Space Complexity (KB) ---
+DB_Size(N), AOOSE_Stack_KB, COOSE_Stack_KB, BL_Linear_KB,BL_BinarySearch_KB,BL_HashMap_KB
+1,0.19,0.35,0.22,0.24,0.25
+10,1.91,3.46,2.23,2.38,2.46
+100,19.14,34.57,22.27,23.83,24.61
+200,38.28,69.14,44.53,47.66,49.22
+400,76.56,138.28,89.06,95.31,98.44
+600,114.84,207.42,133.59,142.97,147.66
+1000,191.41,345.70,222.66,238.28,246.09
