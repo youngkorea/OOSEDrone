@@ -80,8 +80,8 @@ OnSigncrypt + send         UnSigncrypt
 ```
 
 - **Ground Station**: Pre-flight OffSigncrypt, loads token(OffSigncrypt output) DB onto sender drone
-- **Sender Drone**: Flies waypoint mission, performs OnSigncrypt per message, dynamically selects receiver
-- **Receiver Drones**: Fixed positions, receive and UnSigncrypt ciphertext
+- **Sender Drone**: Flies the waypoint mission, performs OnSigncrypt per message, dynamically selects the receiver
+- **Receiver Drones**: Fly at random positions, receive and UnSigncrypt ciphertext
 - **Wireless**: IEEE 802.11 Ad-hoc mode with GlobalArp
 
 
@@ -155,13 +155,14 @@ python3 plot_results.py
 | Token retrieval time | Wall-clock measured: O(1) stack pop vs O(n) linear scan |
 | Online phase latency | Token retrieval + OnSigncrypt computation time |
 | Sender throughput | Packets successfully sent per second |
-| Packet delivery ratio | Packets received by receivers / packets sent by sender |
+| Packet delivery ratio | Packets received by receivers/packets sent by sender |
 | Total latency | OffSigncrypt delay + online phase latency |
 
 
 ## Benchmark
 
-Cryptographic operation times are measured using C implementations with the PBC (Pairing-Based Cryptography) library. Each benchmark iterates the scheme N times and records the average execution time for OffSigncrypt, OnSigncrypt, and UnSigncrypt.
+Cryptographic operation times are measured using C implementations with the PBC (Pairing-Based Cryptography) library. Each benchmark iterates the scheme N times and records the average execution time for OffSigncrypt, OnSigncrypt, and UnSigncrypt. For the retrieval benchmark, the space complexity is measured since additional memory overheads can be introduced by each algorithm as the DB size increases.
+
 
 # Build benchmark (requires PBC library)
 ```bash
