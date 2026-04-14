@@ -310,8 +310,8 @@ int main(int argc, char **argv) {
     printf("======================================\n");
     
     if (csv_file) { 
-        fprintf(csv_file, "\n"); // 데이터와 구분을 위해 빈 줄 하나 추가
-        fprintf(csv_file, "Average,%.4f,%.4f,%.4f\n", avg_off, avg_on, avg_un); // 평균값 기록
+        fprintf(csv_file, "\n"); 
+        fprintf(csv_file, "Average,%.4f,%.4f,%.4f\n", avg_off, avg_on, avg_un); 
         fclose(csv_file);
         printf("-> Benchmark results are stored in 'benchmark_results_sun.csv'.\n\n"); 
     }
