@@ -164,7 +164,7 @@ python3 plot_results.py
 Cryptographic operation times are measured using C implementations with the PBC (Pairing-Based Cryptography) library. Each benchmark iterates the scheme N times and records the average execution time for OffSigncrypt, OnSigncrypt, and UnSigncrypt. For the retrieval benchmark, the space complexity is measured since additional memory overheads can be introduced by each algorithm as the DB size increases.
 
 
-## Build benchmark (requires PBC library)
+### Build benchmark (requires PBC library)
 ```bash
 cd benchmark/aoose
 gcc -o main main.c -lpbc -lgmp
