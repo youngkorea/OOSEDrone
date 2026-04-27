@@ -1,6 +1,7 @@
 # OOSEDrone
 
-OMNeT++/INET network simulation for evaluating ID-based on/offline signcryption schemes in Internet of Drones (IoD) environments.
+OMNeT++/INET network simulation for evaluating ID-based on/offline signcryption schemes in Internet of Drones (IoD) environments. 
+The associated manuscript is currently under review at IEEE Transactions on Dependable and Secure Computing (TDSC).
 
 
 ## Overview
